@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagem/revenue.ico" type="image/x-icon">
+    <title>Só um aumentinho</title>
+</head>
+
+<body>
+
+    <div id="page_pedir">
+        <img src="https://i.ibb.co/dXj00YW/mendigo-pica-pau.webp" alt="Mendigo do Pica-Pau" class="mendigo-img">
+
+        <h1
+            style="color: rgb(255, 190, 26); font-size: 64px; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; letter-spacing: 0.5px; font-weight: 400; text-shadow: 0 0 8px black; text-align: center;">
+            Olá, chefe</h1>
+        <p
+            style="color: white; font-size: 32px; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: 700; text-shadow: 0 0 6px black; text-align: center;">
+            O senhor poderia, por gentileza,<br> me dar um aumento?</p>
+        
+        <div class="botoes">
+            <button id="pos" style="cursor: pointer;">CLARO, MEU MELHOR FUNCIONÁRIO</button>
+            <button id="neg"
+                style="background: linear-gradient(145deg, rgb(219, 5, 5), rgb(249, 65, 65)); box-shadow: 0 0 20px rgb(255, 0, 0);">NÃO</button>
+        </div>
+
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTY0eXRyY3Vtb3FkcXJuaHFhdzRieHp5bnhzNno4a2ZsOHVrbDhpeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oKIpjhMbrEmsM8Ydt9/giphy.gif"
+            alt="Chuva de Fundo em .gif" class="background">
+    </div>
+
+    <div id="page_obrigado" style="display: none;">
+        <div class="container">
+            <h1>OBRIGADO, CHEFE</h1>
+            <h2>Atributos melhorados:</h2>
+
+            <div class="att1">
+                <p class="atributo1">Salário:</p>
+                <p class="up1" style="color: rgb(5, 180, 5);">+40%</p>
+            </div>
+            <div class="att2">
+                <p class="atributo2">Gratidão ao chefe:</p>
+                <p class="up2" style="color: rgb(5, 180, 5);">+23%</p>
+            </div>
+            <div class="att3">
+                <p class="atributo3">Vontade de se demitir:</p>
+                <p class="up3" style="color: red">-32%</p>
+            </div>
+            <div class="att4">
+                <p class="atributo4">Mau humor:</p>
+                <p class="up4" style="color: red">-14%</p>
+            </div>
+
+            <button>DAR AUMENTO EXTRA</button>
+        </div>
+
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTdsYjBuMzJicWR5cm44d2l0aTF0NW5zZ2RqYTFkNnp2Y2xhdXJ6diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z1jtJsT0R8RTKC2oVJ/giphy.gif" alt="Goku na forma Super-Sayajin" class="background">
+    </div>
+
+
+</body>
+
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    /* 1. Estilo para as imagens de fundo (GIFs) */
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.5;
+        z-index: -2;
+        margin-top: 0; 
+    }
+
+    /* --- Estilos da Página 1 (Pedir) --- */
+
+    #page_pedir {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* 3. Estilo APENAS para a imagem do mendigo */
+    #page_pedir .mendigo-img {
+        width: 400px;
+        height: auto;
+        margin-top: 80px;
+        position: relative; 
+        z-index: 1;
+    }
+
+
+    #page_pedir button {
+        position: relative; 
+        z-index: 1;
+        width: 250px;
+        background-color: black;
+        color: white;
+        height: 50px;
+        font-weight: bold;
+        font-size: 16px;
+        background: linear-gradient(145deg, rgb(13, 60, 190), rgb(22, 123, 231));
+        border: none;
+        box-shadow: 0 0 20px rgb(12, 76, 196);
+        transition: 0.3s;
+    }
+
+    #page_pedir #pos:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 60px rgb(1, 90, 255);
+        transition: 0.5s;
+    }
+
+    #page_pedir .botoes {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        /* CORREÇÃO AQUI: Dando um espaço positivo */
+        margin-top: 20px;
+    }
+
+
+    /* --- Estilos da Página 2 (Obrigado) --- */
+
+    #page_obrigado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #page_obrigado h1,
+    #page_obrigado h2 {
+        opacity: 0;
+        transition: 1s;
+        position: relative;
+        z-index: 1;
+    }
+
+    #page_obrigado h1 {
+        color: rgb(255, 190, 26);
+        font-size: 36px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        text-shadow: 0 0 8px black;
+    }
+
+    #page_obrigado h2 {
+        color: white;
+        font-size: 30px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        letter-spacing: 0.5px;
+        font-weight: 400;
+        text-shadow: 0 0 6px black;
+        margin-bottom: 20px;
+    }
+
+    #page_obrigado .container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 40px 60px 40px;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.264);
+        margin-top: 150px;
+        z-index: 1; 
+    }
+
+    #page_obrigado .att1,
+    #page_obrigado .att2,
+    #page_obrigado .att3,
+    #page_obrigado .att4 {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        opacity: 0;
+        translate: -100px;
+        transition: 1s;
+    }
+
+    #page_obrigado .atributo1,
+    #page_obrigado .atributo2,
+    #page_obrigado .atributo3,
+    #page_obrigado .atributo4 {
+        font-size: 28px;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    #page_obrigado .up1,
+    #page_obrigado .up2,
+    #page_obrigado .up3,
+    #page_obrigado .up4 {
+        font-size: 24px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        opacity: 0;
+    }
+
+    #page_obrigado .container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.589);
+        z-index: -1;
+    }
+
+    #page_obrigado button {
+        height: 40px;
+        background-color: rgb(255, 190, 26);
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: 800;
+        opacity: 0;
+        transition: 2s;
+    }
+
+    #page_obrigado button:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    /* --- Estilos Globais (Rodapé) --- */
+    
+    #rodape {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #FFFFFF;
+        text-align: center;
+        padding-top: 20px;
+        z-index: 10;
+    }
+
+    a {
+        text-decoration: none;
+        color: aqua;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+</style>
+
+<script>
+
+    // --- Script da Página 1 (Botão "NÃO") ---
+    const botaoNao = document.querySelector('#neg');
+    let moveX = 0;
+    let moveY = 0;
+
+    botaoNao.addEventListener("mouseover", function () {
+        moveX = (Math.random() * 801 - 400); 
+        moveY = (Math.random() * 401 - 400); 
+
+        botaoNao.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    })
+
+    // --- Script da Página 2 (Animações) ---
+    function showAtt1() {
+        document.querySelector('.att1').style.opacity = '1';
+        document.querySelector('.att1').style.translate = '0';
+    }
+    function showAtt2() {
+        document.querySelector('.att2').style.opacity = '1';
+        document.querySelector('.att2').style.translate = '0';
+    }
+    function showAtt3() {
+        document.querySelector('.att3').style.opacity = '1';
+        document.querySelector('.att3').style.translate = '0';
+    }
+    function showAtt4() {
+        document.querySelector('.att4').style.opacity = '1';
+        document.querySelector('.att4').style.translate = '0';
+    }
+    function showUp1() {
+        document.querySelector('.up1').style.opacity = '1';
+    }
+    function showUp2() {
+        document.querySelector('.up2').style.opacity = '1';
+    }
+    function showUp3() {
+        document.querySelector('.up3').style.opacity = '1';
+    }
+    function showUp4() {
+        document.querySelector('.up4').style.opacity = '1';
+    }
+
+    function animation() {
+        document.querySelector('#page_obrigado h1').style.opacity = 1;
+
+        setTimeout(() => {
+            document.querySelector('#page_obrigado h2').style.opacity = 1;
+        }, 300);
+
+        setTimeout(showAtt1, 500);
+        setTimeout(showAtt2, 1000);
+        setTimeout(showAtt3, 1500);
+        setTimeout(showAtt4, 2000);
+        setTimeout(showUp1, 3000);
+        setTimeout(showUp2, 4000);
+        setTimeout(showUp3, 5000);
+        setTimeout(showUp4, 6000);
+
+        setTimeout(() => {
+            document.querySelector('#page_obrigado button').style.opacity = '1';
+        }, 7000);
+    }
+
+    // --- NOVO SCRIPT (Integração) ---
+    const botaoSim = document.querySelector('#pos');
+    const pagePedir = document.querySelector('#page_pedir');
+    const pageObrigado = document.querySelector('#page_obrigado');
+
+    botaoSim.addEventListener("click", function () {
+        pagePedir.style.display = 'none';
+        pageObrigado.style.display = 'flex';
+        animation();
+    });
+
+</script>
